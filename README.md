@@ -1,4 +1,4 @@
 # Buy a house in Beijing
-dsfsdfsd
-# sdfsdfsd
-sdfsdfsd
+
+# Files:
+*main_file: shiny ui and server application

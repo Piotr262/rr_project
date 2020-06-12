@@ -1,0 +1,61 @@
+library(shiny)
+library(dplyr)
+library(ggplot2)
+
+
+# Define User interface
+shinyUI(fluidPage(
+  # Application title
+  titlePanel("Buy a house in Beijing"),
+  theme = shinythemes::shinytheme("flatly"),
+  sidebarLayout(
+    sidebarPanel(
+      # Inputs here:
+      selectInput('elevator', 
+                  'Select whether has elevator:', 
+                  choices = c("No","Yes"),"Yes"),
+      selectInput('renovationCondition', 
+                  'Select the renovarion condition:', 
+                  choices = c("Other","Rough","Simplicity","Hardcover"),"Simplicity"),
+      selectInput('subway', 
+                  'Select whether has subway station nearby:', 
+                  choices = c("No","Yes"),"Yes"),
+      
+      sliderInput("district",
+                  "Select district index number:",
+                  min = 1,
+                  max = 13,
+                  value = 1),
+      
+      sliderInput("totalPrice",
+                  "Choose a range of total price:",
+                  min = 50004,
+                  max = 24980007,
+                  value = c(50004,24980007)),
+      
+      sliderInput("square",
+                  "Choose a range of square:",
+                  min = 9,
+                  max = 250,
+                  value = c(60,100)),
+      
+      sliderInput("building_age", "Choose a range of building's age:",
+                  min=2,
+                  max=85,
+                  value = c(29,65)),
+      
+      dateRangeInput("tradeTime", "Choose a date range:",
+                     start = "2010-01-05",
+                     end = "2018-01-28")
+      
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      # Output here:
+      DT::DTOutput('table_top_10_followers'),
+      plotly::plotlyOutput('price_according_to_time')
+      
+    )
+  )
+))

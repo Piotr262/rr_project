@@ -18,5 +18,5 @@ Our dataset was downloaded from Kaggle, the content is about housing prices in B
 
 ## Application 
 
-Our app is
+Our app is designed for conducting an exploratory data analysis using the data set with house prices in Beijing.
 

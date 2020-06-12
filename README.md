@@ -1,1 +1,1 @@
-# This branch was created to enable further development of new features.
+# This branch was created to enable further work on potential bugs.

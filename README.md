@@ -20,3 +20,13 @@ Our dataset was downloaded from Kaggle, the content is about housing prices in B
 
 Our app is designed for conducting an exploratory data analysis using the data set with house prices in Beijing.
 
+We can choose:
+* Building Age
+* Square meter size
+* District
+* If the building has a subway station nearby
+* Renovation condition
+* If the building has an elevator
+
+On the top of the page we can also select the number of entries (10-25-50-100)
+

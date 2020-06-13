@@ -3,7 +3,6 @@
 ## Files
 * main_file: shiny ui and server application
 * README.md: description of the project
-* beijing1.csv: csv file with the data set
 * beijing_super_clean2.rds: rds file with clean data set
 
 ## Packages
